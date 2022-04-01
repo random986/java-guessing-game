@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Oops extends AppCompatActivity {
 
     TextView textView;
-    int string;
+    int number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class Oops extends AppCompatActivity {
         textView = findViewById(R.id.answer);
 
         //textView settings
-        string = getIntent().getExtras().getInt("value");
-        textView.setInputType(string);
+        number = getIntent().getExtras().getInt("value");
+        textView.setInputType(number);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

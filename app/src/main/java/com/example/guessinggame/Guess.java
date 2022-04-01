@@ -14,7 +14,7 @@ import java.util.Random;
 public class Guess extends AppCompatActivity {
 
     public EditText editText;
-    int string;
+    int number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,14 +76,14 @@ public class Guess extends AppCompatActivity {
 
             private void openCongratulations() {
                 Intent intent = new Intent(Guess.this, Congratulations.class);
-                string=editText.getInputType();
-                intent.putExtra("value",string);
+                number=editText.getInputType();
+                intent.putExtra("value",number);
                 startActivity(intent);
             }
             private void openOops() {
                 Intent intent = new Intent(Guess.this, Oops.class);
-                string=editText.getInputType();
-                intent.putExtra("value",string);
+                number=editText.getInputType();
+                intent.putExtra("value",number);
                 startActivity(intent);
             }
         });
